@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Youtube Spam Detector</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet"> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Courgette|Kanit|Permanent+Marker|Righteous" rel="stylesheet"> 
+  <style>
+  .content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  font-family: 'Righteous';
+}
+ .content-section1 {
+  background: #ffffff;
+  padding: 10px 20px;
+  font-size: 80px;
+  margin-bottom: 140px;
+  font-color:gray;
+  font-family: 'Righteous';
+  text-align: center;
+  color: blue;
+}
+.text_box {
+    height:50px;
+    width:550px;
+}
+.btn
+{
+  width: 130px;
+  height: 60px;
+  font-family: 'Righteous';
+  font-size: 25px;
+}
+</style>
+</head>
+<body>
+  <div class="content-section1">Result</div>
+  <div class="content-section" style="font-size: 50px;text-align: center">The provided input is  </div>
+  <div class="results">
+
+
+    
+  {% if prediction == 1%}
+  <div class="content-section" style="color:red;text-align: center;font-size: 60px">Spam</div>
+  {% elif prediction == 0%}
+  <div class="content-section" style="color:blue;text-align: center;font-size: 60px">Not a Spam (It is a Ham)</div>
+  {% endif %}
+
+  </div>
+
+</body>
+</html>
